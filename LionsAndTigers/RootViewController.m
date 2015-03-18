@@ -6,13 +6,15 @@
 //  Copyright (c) 2015 MobileMakers. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RootViewController.h"
 
-@interface ViewController ()
+@interface RootViewController ()
+@property (weak, nonatomic) IBOutlet UIView *leftContraintForTop;
+@property (weak, nonatomic) IBOutlet UIView *rightContraintForTop;
 
 @end
 
-@implementation ViewController
+@implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
