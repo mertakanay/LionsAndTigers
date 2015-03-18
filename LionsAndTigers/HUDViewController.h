@@ -10,7 +10,6 @@
 
 @protocol HUDDelegate <NSObject>
 
-<#methods#>
 
 @end
 

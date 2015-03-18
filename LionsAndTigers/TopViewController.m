@@ -17,6 +17,7 @@
 
 - (IBAction)onLeftBarButtonTapped:(UIBarButtonItem *)sender
 {
+    [self.delegate topRevealButtonTapped:sender];
     
 }
 

@@ -7,23 +7,45 @@
 //
 
 #import "RootViewController.h"
+#import "TopViewController.h"
+#import "HUDViewController.h"
 
-@interface RootViewController ()
-@property (weak, nonatomic) IBOutlet UIView *leftContraintForTop;
-@property (weak, nonatomic) IBOutlet UIView *rightContraintForTop;
+
+@interface RootViewController () <TopDelegate, HUDDelegate>
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftConstraintForTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightConstraintForTop;
+
+
+@property (nonatomic) NSArray *photosArray;
+
+
 
 @end
 
 @implementation RootViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    NSArray *lionsImages = @[[UIImage imageNamed:@"lion1"],
+                             [UIImage imageNamed:@"lion2"],
+                             [UIImage imageNamed:@"lion3"]];
+
+    NSArray *tigerimages = @[[UIImage imageNamed:@"tiger1"],
+                             [UIImage imageNamed:@"tiger2"],
+                             [UIImage imageNamed:@"tiger3"]];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)topRevealButtonTapped:(UIBarButtonItem *)button
+{
+
+
+    self.leftConstraintForTop.constant += 100;
+    self.rightConstraintForTop.constant += 100;
+
 }
+
 
 @end

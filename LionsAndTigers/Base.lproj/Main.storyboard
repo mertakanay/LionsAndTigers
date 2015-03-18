@@ -24,7 +24,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-Fv-io1">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="57" y="0.0" width="600" height="600"/>
                                 <connections>
                                     <segue destination="KXm-af-if3" kind="embed" id="UMX-5y-Fg6"/>
                                 </connections>
@@ -34,17 +34,17 @@
                         <constraints>
                             <constraint firstItem="Zhb-Fv-io1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="37V-gq-xYz"/>
                             <constraint firstItem="Svy-Xf-aim" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="F26-iz-xzz"/>
-                            <constraint firstItem="Zhb-Fv-io1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="G2P-aV-FsT"/>
+                            <constraint firstItem="Zhb-Fv-io1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="G2P-aV-FsT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zhb-Fv-io1" secondAttribute="bottom" id="LXi-DJ-5Bt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zhb-Fv-io1" secondAttribute="trailing" constant="-16" id="Lfd-EQ-eVj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zhb-Fv-io1" secondAttribute="trailing" constant="-73" id="Lfd-EQ-eVj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Svy-Xf-aim" secondAttribute="bottom" id="X5W-bL-5V4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Svy-Xf-aim" secondAttribute="trailing" constant="-16" id="mlt-cC-VO2"/>
                             <constraint firstItem="Svy-Xf-aim" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="xXU-2w-Kg3"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="leftContraintForTop" destination="Zhb-Fv-io1" id="cWL-ps-YBT"/>
-                        <outlet property="rightContraintForTop" destination="Zhb-Fv-io1" id="rpa-4v-ZFL"/>
+                        <outlet property="leftConstraintForTop" destination="G2P-aV-FsT" id="IFA-rT-Pxf"/>
+                        <outlet property="rightConstraintForTop" destination="Lfd-EQ-eVj" id="gux-u6-oRZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
