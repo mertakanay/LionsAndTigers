@@ -8,11 +8,13 @@
 
 #import "TopViewController.h"
 
-@interface TopViewController ()
+@interface TopViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
 
 @end
 
 @implementation TopViewController
+
+
 - (IBAction)onLeftBarButtonTapped:(UIBarButtonItem *)sender
 {
     
@@ -22,5 +24,7 @@
     [super viewDidLoad];
 
 }
+
+
 
 @end
