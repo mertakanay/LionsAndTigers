@@ -10,9 +10,12 @@
 
 @protocol HUDDelegate <NSObject>
 
+-(void)shouldShowPicturesOnButtonTapped:(UIButton *)button;
 
 @end
 
 @interface HUDViewController : UIViewController
+
+@property id<HUDDelegate> delegate;
 
 @end

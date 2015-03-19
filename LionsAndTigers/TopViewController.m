@@ -10,6 +10,8 @@
 
 @interface TopViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
 
+
+
 @end
 
 @implementation TopViewController
@@ -26,6 +28,18 @@
 
 }
 
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.picturesArray.count;
+}
 
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:self.picturesArray[indexPath.row]];
+    [cell.contentView addSubview:imageView];
+
+    return cell;
+}
 
 @end

@@ -20,13 +20,13 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Svy-Xf-aim">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
-                                    <segue destination="6c6-ZZ-J5e" kind="embed" id="xK9-0D-Cje"/>
+                                    <segue destination="6c6-ZZ-J5e" kind="embed" identifier="segueToHUDVC" id="xK9-0D-Cje"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-Fv-io1">
-                                <rect key="frame" x="57" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
-                                    <segue destination="KXm-af-if3" kind="embed" id="UMX-5y-Fg6"/>
+                                    <segue destination="KXm-af-if3" kind="embed" identifier="segueToTopVC" id="UMX-5y-Fg6"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -34,15 +34,16 @@
                         <constraints>
                             <constraint firstItem="Zhb-Fv-io1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="37V-gq-xYz"/>
                             <constraint firstItem="Svy-Xf-aim" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="F26-iz-xzz"/>
-                            <constraint firstItem="Zhb-Fv-io1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="G2P-aV-FsT"/>
+                            <constraint firstItem="Zhb-Fv-io1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="G2P-aV-FsT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zhb-Fv-io1" secondAttribute="bottom" id="LXi-DJ-5Bt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zhb-Fv-io1" secondAttribute="trailing" constant="-73" id="Lfd-EQ-eVj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zhb-Fv-io1" secondAttribute="trailing" constant="-16" id="Lfd-EQ-eVj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Svy-Xf-aim" secondAttribute="bottom" id="X5W-bL-5V4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Svy-Xf-aim" secondAttribute="trailing" constant="-16" id="mlt-cC-VO2"/>
                             <constraint firstItem="Svy-Xf-aim" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="xXU-2w-Kg3"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerTop" destination="Zhb-Fv-io1" id="Y7M-Ay-5ay"/>
                         <outlet property="leftConstraintForTop" destination="G2P-aV-FsT" id="IFA-rT-Pxf"/>
                         <outlet property="rightConstraintForTop" destination="Lfd-EQ-eVj" id="gux-u6-oRZ"/>
                     </connections>
@@ -68,7 +69,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onLionButtonTapped:" destination="6c6-ZZ-J5e" eventType="touchUpInside" id="zyI-fP-iDh"/>
+                                    <action selector="onPictureButtonTapped:" destination="6c6-ZZ-J5e" eventType="touchUpInside" id="HmS-ml-FbA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRu-oP-AMH">
@@ -77,7 +78,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onTigersButtonTapped:" destination="6c6-ZZ-J5e" eventType="touchUpInside" id="rP2-WT-6CE"/>
+                                    <action selector="onPictureButtonTapped:" destination="6c6-ZZ-J5e" eventType="touchUpInside" id="yjK-eO-0LM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,12 +124,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w36-2F-udR">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w36-2F-udR">
                                                     <rect key="frame" x="0.0" y="0.0" width="125" height="114"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="w36-2F-udR" firstAttribute="leading" secondItem="qjp-FP-7sZ" secondAttribute="leadingMargin" constant="-8" id="Bh2-Oz-HpE"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="w36-2F-udR" secondAttribute="bottom" constant="-8" id="hgi-zd-RAA"/>
+                                            <constraint firstItem="w36-2F-udR" firstAttribute="top" secondItem="qjp-FP-7sZ" secondAttribute="topMargin" constant="-8" id="teX-HU-XWw"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="w36-2F-udR" secondAttribute="trailing" constant="-8" id="xsc-95-zfe"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="cellImageView" destination="w36-2F-udR" id="UR3-O7-p4a"/>
                                         </connections>
@@ -150,6 +157,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="U6o-mA-Ohy" id="GXn-8R-uRe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofU-At-ddF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,7 +181,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7H-Kk-A1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446" y="1116"/>
+            <point key="canvasLocation" x="1306" y="997"/>
         </scene>
     </scenes>
 </document>

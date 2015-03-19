@@ -18,5 +18,9 @@
 
 @property id<TopDelegate> delegate;
 
+@property (nonatomic) NSArray *picturesArray;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 
 @end

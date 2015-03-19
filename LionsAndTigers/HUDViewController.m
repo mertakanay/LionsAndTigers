@@ -13,14 +13,19 @@
 @end
 
 @implementation HUDViewController
-- (IBAction)onLionButtonTapped:(UIButton *)sender {
+
+- (IBAction)onPictureButtonTapped:(UIButton *)sender
+{
+    [self.delegate shouldShowPicturesOnButtonTapped:sender];
 }
-- (IBAction)onTigersButtonTapped:(UIButton *)sender {
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
 }
+
+
+
 
 @end
